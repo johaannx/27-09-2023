@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block header %}Login{% endblock %}
+
+{% block content %}
+    {% if error %}
+    <p class="text-red-500 mb-4">{{ error }}</p>
+    {% endif %}
+    <form action="/login" method="POST">
+        <div class="mb-4">
+            <label for="username" class="block text-gray-700">Username</label>
+            <input type="text" id="username" name="username" class="border w-full px-3 py-2 rounded-lg focus:outline-none focus:border-blue-500" required>
+        </div>
+        <div class="mb-4">
+            <label for="password" class="block text-gray-700">Password</label>
+            <input type="password" id="password" name="password" class="border w-full px-3 py-2 rounded-lg focus:outline-none focus:border-blue-500" required>
+        </div>
+        <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-lg w-full">Login</button>
+    </form>
+{% endblock %}
