@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="flex justify-center items-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md w-96" style="margin-right: 20rem;">
+        <h1 class="text-2xl font-semibold mb-4">Dashboard</h1>
+        <p>Welcome to the dashboard! Here, you can access various features.</p>
+
+        <!-- Sample dashboard content -->
+        <div class="mt-4">
+            <h2 class="text-lg font-semibold mb-2">Recent Activity</h2>
+            <ul class="list-disc pl-6">
+                <li>User A uploaded a new document.</li>
+                <li>User B updated their profile information.</li>
+                <li>User C shared a project with you.</li>
+            </ul>
+        </div>
+
+        <div class="mt-6">
+            <h2 class="text-lg font-semibold mb-2">Quick Links</h2>
+            <ul class="list-none">
+                <li><a href="/projects" class="text-blue-500 hover:underline">View Projects</a></li>
+                <li><a href="/profile" class="text-blue-500 hover:underline">Edit Profile</a></li>
+                <li><a href="/settings" class="text-blue-500 hover:underline">Account Settings</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

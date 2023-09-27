@@ -1,22 +1,23 @@
 {% extends "base.html" %}
 
-{% block title %}Login{% endblock %}
-
-{% block header %}Login{% endblock %}
+{% block title %}MetaCalm{% endblock %}
 
 {% block content %}
-    {% if error %}
-    <p class="text-red-500 mb-4">{{ error }}</p>
-    {% endif %}
-    <form action="/login" method="POST">
-        <div class="mb-4">
-            <label for="username" class="block text-gray-700">Username</label>
-            <input type="text" id="username" name="username" class="border w-full px-3 py-2 rounded-lg focus:outline-none focus:border-blue-500" required>
-        </div>
-        <div class="mb-4">
-            <label for="password" class="block text-gray-700">Password</label>
-            <input type="password" id="password" name="password" class="border w-full px-3 py-2 rounded-lg focus:outline-none focus:border-blue-500" required>
-        </div>
-        <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-lg w-full">Login</button>
-    </form>
+<div class="flex justify-end items-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md w-96" style="margin-right: 20rem;">
+        <h1 class="text-2xl text-indigo-700 text-center font-semibold mb-4">Metacalm</h1>
+        {% if error %}
+        <p class="text-red-500 mb-4">{{ error }}</p>
+        {% endif %}
+        <form action="/login" method="POST">
+            <div class="mb-4">
+                <input type="text" name="username" placeholder="Username" class="input input-bordered bg-white w-full max-w-xs" required>
+            </div>
+            <div class="mb-4">
+                <input type="password" name="password" placeholder="Password" class="input input-bordered bg-white w-full max-w-xs" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-full text-gray-400 hover:text-white">Login</button>
+        </form>
+    </div>
+</div>
 {% endblock %}

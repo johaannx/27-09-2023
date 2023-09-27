@@ -1,16 +1,14 @@
-<!-- base.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.8.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <title>{% block title %}Login{% endblock %}</title>
 </head>
-<body class="bg-gray-100 flex justify-center items-center h-screen">
-    <div class="bg-white p-8 rounded-lg shadow-md w-96">
-        <h1 class="text-2xl font-semibold mb-4">{% block header %}Login{% endblock %}</h1>
-        {% block content %}{% endblock %}
-    </div>
+<body style="background-image: url('../static/Metacalm-2.png'); background-size: cover; background-repeat: no-repeat;">
+    {% block content %}{% endblock %}
 </body>
 </html>
